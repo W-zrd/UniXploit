@@ -1,0 +1,55 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f7ff !important;
+}
+
+.sidebar {
+    height: 1000px;
+    background-color: #121415;
+    float: left;
+}
+
+.sidebar a {
+    color: #f75600;
+}
+
+.sidebar a:hover {
+    color: white;
+}
+
+.sidebar a:focus {
+    background-color: #1f1f1e;
+    border-radius: 12px;
+    padding: 10px;
+    color: #f75600;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%; /* Adjust the margin as needed */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-form {
+    background-color: white;
+    box-shadow: 0px 8px 30px 0px rgba(37, 36, 34, 0.07);
+    border-radius: 20px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    text-decoration: none;
+}
+
+#delete-icon {
+    color: red;
+}
