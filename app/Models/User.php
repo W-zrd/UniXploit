@@ -44,5 +44,14 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 
+    // Optionally, you can define a setPasswordAttribute method to ensure 
+    // passwords are always hashed when being set.
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
 }

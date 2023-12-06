@@ -1,8 +1,7 @@
-@extends('layouts.generics')
-@section('navbar')
-    @include('layouts.parts.navbar')
-@endsection
-@section('content')
+<?php $__env->startSection('navbar'); ?>
+    <?php echo $__env->make('layouts.parts.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
     <!-- EDIT PROF -->
     <section class="editprof-content">
         <div class="container">
@@ -15,9 +14,9 @@
                                     <div class="card-body">
                                         <h5 class="card-title fw-bold text-primary">Profile</h5>
                                         <p class="card-text text-secondary mb-0 small">Username</p>
-                                        <p class="card-text text-dark">{{ auth()->user()->username }}</p>
+                                        <p class="card-text text-dark"><?php echo e(auth()->user()->username); ?></p>
                                         <p class="card-text text-secondary mb-0 small">Email</p>
-                                        <p class="card-text">{{ auth()->user()->email }}</p>
+                                        <p class="card-text"><?php echo e(auth()->user()->email); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -36,8 +35,8 @@
                                     <li class="nav-item px-1 mb-5">
                                         <a class="nav-link disabled nav-JS" aria-disabled >Riwayat</a>
                                     </li>
-                                    <form action="{{ route('logout') }}" method="POST">
-                                        @csrf
+                                    <form action="<?php echo e(route('logout')); ?>" method="POST">
+                                        <?php echo csrf_field(); ?>
                                         <button type="submit" class="text-danger border-0 bg-white px-1 h5 ps-3 pb-2">Log Out</button>
                                     </form>
                                 </ul>
@@ -49,7 +48,7 @@
                     <div id="profil" class="tab-content">
                         <div class="cell justify-content-center rounded bg-white"> 
                             <div class="m-3 h-25 text-center">
-                                <img src="{{ asset('assets/img/demonzz.jpg') }}" class="rounded-circle m-1 pt-3" alt="Profile Picture" style="width: 125px">
+                                <img src="<?php echo e(asset('assets/img/demonzz.jpg')); ?>" class="rounded-circle m-1 pt-3" alt="Profile Picture" style="width: 125px">
                                 <h3 >Nama lengkap</h3>
                                 <hr>
                             </div>
@@ -58,17 +57,17 @@
                                     <div class="row p-3 pt-0">
                                         <div class="col">
                                             <label class="ps-1 pb-1" for="formGroupExampleInput">Nama Lengkap</label>
-                                            <input type="text" class="form-control activecolor"value="{{ auth()->user()->nama_lengkap}}">
+                                            <input type="text" class="form-control activecolor"value="<?php echo e(auth()->user()->nama_lengkap); ?>">
                                         </div>
                                         <div class="col">
                                             <label class="ps-1 pb-1" for="formGroupExampleInput">Username</label>
-                                            <input type="text" class="form-control activecolor"value="{{ auth()->user()->username}}">
+                                            <input type="text" class="form-control activecolor"value="<?php echo e(auth()->user()->username); ?>">
                                         </div>
                                     </div>
                                     <div class="row p-3 pt-0">
                                         <div class="col">
                                             <label class="ps-1 pb-1" for="formGroupExampleInput">Alamat</label>
-                                            <input type="text" class="form-control activecolor" value="{{ auth()->user()->alamat}}">
+                                            <input type="text" class="form-control activecolor" value="<?php echo e(auth()->user()->alamat); ?>">
                                         </div>
                                         <div class="col">
                                             <label class="ps-1 pb-1" for="formGroupExampleInput">Jenis Kelamin</label>
@@ -90,7 +89,7 @@
                     <div id="privasiii" class="tab-content">
                         <div class="cell justify-content-center rounded bg-white"> 
                             <div class="m-3 h-25 text-center">
-                                <img src="{{ asset('assets/img/demonzz.jpg') }}" class="rounded-circle m-1 pt-3" alt="Profile Picture" style="width: 125px">
+                                <img src="<?php echo e(asset('assets/img/demonzz.jpg')); ?>" class="rounded-circle m-1 pt-3" alt="Profile Picture" style="width: 125px">
                                 <h3 >Nama lengkap</h3>
                                 <hr>
                             </div>
@@ -99,11 +98,11 @@
                                     <div class="row p-3 pt-0">
                                         <div class="col">
                                             <label class="ps-1 pb-1" for="formGroupExampleInput">Username</label>
-                                            <input type="text" class="form-control activecolor" value="{{ auth()->user()->username}}">
+                                            <input type="text" class="form-control activecolor" value="<?php echo e(auth()->user()->username); ?>">
                                         </div>
                                         <div class="col">
                                             <label class="ps-1 pb-1" for="formGroupExampleInput">Email</label>
-                                            <input type="text"class="form-control activecolor" value="{{ auth()->user()->email}}">
+                                            <input type="text"class="form-control activecolor" value="<?php echo e(auth()->user()->email); ?>">
                                         </div>
                                     </div>
                                     <div class="row p-3 pt-0">
@@ -113,7 +112,7 @@
                                         </div>
                                         <div class="col">
                                             <label class="ps-1 pb-1" for="formGroupExampleInput">No Telp</label>
-                                            <input type="text" class="form-control activecolor" value="{{ auth()->user()->telepon}}">
+                                            <input type="text" class="form-control activecolor" value="<?php echo e(auth()->user()->telepon); ?>">
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary m-3 mt-0 float-right">Apply</button>
@@ -125,5 +124,7 @@
             </div>
         </div>
     </section>
-@endsection
+<?php $__env->stopSection(); ?>
   
+
+<?php echo $__env->make('layouts.generics', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/flxnzz/Documents/Code/Web Development/UniXploit/resources/views/editprof.blade.php ENDPATH**/ ?>
