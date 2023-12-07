@@ -102,4 +102,4 @@
 </body>
 </html>
 
-<?php echo $__env->make('layouts.generics', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/flxnzz/Documents/Code/Web Development/UniXploit/resources/views/dashboard.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.generics', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/flxnzz/Documents/Code/Webdev/UniXploit/resources/views/dashboard.blade.php ENDPATH**/ ?>

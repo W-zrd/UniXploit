@@ -1,6 +1,6 @@
 @extends('layouts.generics')
 @section('navbar')
-    @include('layouts.parts.navbar')
+  @include('layouts.parts.navbar')
 @endsection
 @section('content')
     <!--content-->

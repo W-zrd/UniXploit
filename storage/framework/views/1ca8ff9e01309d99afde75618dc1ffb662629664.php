@@ -42,4 +42,4 @@
                 </ul>
             </div>
         </div>
-    </nav><?php /**PATH /home/flxnzz/Documents/Code/Web Development/UniXploit/resources/views/layouts/parts/navbar.blade.php ENDPATH**/ ?>
+    </nav><?php /**PATH /home/flxnzz/Documents/Code/Webdev/UniXploit/resources/views/layouts/parts/navbar.blade.php ENDPATH**/ ?>

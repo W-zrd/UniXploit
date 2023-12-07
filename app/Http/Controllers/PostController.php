@@ -55,14 +55,17 @@ class PostController extends Controller
     }
 
 
-    public function viewPost(Post $id){
-        $id->formatted_date = $id->updated_at->format('d F Y');
-        return view('event-post', ["post" => $id]);
-    }
-
-    public function showPostId($id){
-        $data = Post::find($id);
-        return view('admin.update-post', compact('data'));
+    public function viewPost($id){
+    
+        $post = Post::find($id);
+        if (!$post) {
+            return view('event-post');
+        } else {
+            $post->formatted_date = $post->updated_at->format('d F Y');
+            return view('event-post', ["post" => $post]);
+        }
+    
+        
     }
     
     public function deletePost($id){

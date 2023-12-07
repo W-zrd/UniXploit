@@ -25,19 +25,10 @@
                     </li>
                     <li class="nav-item">
                         <img src= {{ asset('assets/img/pp.png') }} >
-                    </li>                             
-                    {{-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            OSDFGHJKLOSDFGHJKLOSDFGHJKLOSDFGHJKL
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item fs-6" href="/editprof">Profile</a>
-                            <a class="dropdown-item fs-6" href="/">Log Out</a>
-                        </div>
-                    </li>   --}}
+                    </li>    
                     <div class="btn-group">
                         <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ auth()->user()->username}}
+                            {{ auth()->user()->username }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                           <li> <a class="dropdown-item fs-6" href="/editprof">Profile</a> </li>
